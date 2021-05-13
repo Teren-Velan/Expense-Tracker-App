@@ -34,15 +34,17 @@ exports.signup = (req, res) => {
         } 
        
         if(user){
-          const token = jwt.sign({ _id:user._id },process.env.JWT_SECRET,{expiresIn:'1h'})
+          const token = jwt.sign({ _id:user._id },process.env.JWT_SECRET,{expiresIn:'365d'})
+          console.log(token)
           const {_id,firstName , lastName , email , fullname} = user
           res.status(200).json({
             token,
             user:{
               _id ,firstName , lastName , email, fullname
             },
+            message:"ok"
           });
-          console.log(token)
+          
         }
       });
     });
@@ -56,7 +58,7 @@ exports.signin = (req,res) => {
     if(user){
       if(user.authenticate(req.body.password)){
         // at this stage we verified that user is authenticated , so we will issue him a token for user to send with every request to authenticate that its still him
-        const token = jwt.sign({ _id:user._id },process.env.JWT_SECRET,{expiresIn:'1h'})
+        const token = jwt.sign({ _id:user._id },process.env.JWT_SECRET,{expiresIn:'365d'})
         const {_id,firstName , lastName , email , fullname} = user
         res.status(200).json({
           token,
