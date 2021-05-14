@@ -112,6 +112,7 @@ let getOneExpense = async (req, res) => {
 // @desc get one transaction
 // @route get /api/v1/expense/getallexpense/
 let getAllExpense = async(req,res) => {
+  console.log(req)
     try{
         let expense = await Expense.find({
             user: await User.findById(req.user._id)

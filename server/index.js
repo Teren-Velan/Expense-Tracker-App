@@ -2,6 +2,7 @@ const express = require('express');
 const env = require('dotenv');
 const app = express();
 const mongoose = require('mongoose')
+const cors = require('cors')
 
 // routes
 const incomeRoutes = require('./routes/income.routes')
@@ -23,11 +24,10 @@ mongoose.connect(
 
 // middlewares
 app.use(express.json())
+app.use(cors())
 app.use('/api/v1/auth' , authRoutes)
 app.use('/api/v1/income' , incomeRoutes)
 app.use('/api/v1/expense' , expenseRoutes)
-
-
 
 
 app.listen(process.env.PORT, ()=>{

@@ -1,24 +1,25 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+// import { Card } from "react-bootstrap";
 import "./entry.css";
+import { TiEdit , TiDelete } from "react-icons/ti";
 
 function Entry() {
   return (
     <div className={"entry_container"}>
         <div className={"entry_container_left"}>
-          CATEGORY
+          Shopping
         </div>
       <div className={"entry_container_right"}>
             <div className={"entry_container_amt"}>
-                AMOUNT
+                $1200
             </div>
 
             <div className={"entry_container_icon"}>
-                <div>
-                    icon 1
+                <div >
+                    <TiEdit size={23}/>
                 </div>
                 <div>
-                    icon 2
+                <TiDelete size={23}/>
                 </div>
 
              </div>

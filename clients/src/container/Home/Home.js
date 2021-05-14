@@ -4,6 +4,7 @@ import EntryBtns from "../../components/AddEntryBtns/EntryBtns";
 import AllEntries from "../../components/Entry/AllEntries";
 import Layout from "../../components/Layout/Layout";
 import Summary from "../../components/Summary/Summary";
+import Auth from "../Auth/Auth";
 
 function Home() {
   return (

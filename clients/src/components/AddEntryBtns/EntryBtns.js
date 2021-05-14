@@ -13,6 +13,7 @@ function EntryBtns() {
   const handleCloseInc = () => setShowIncome(false);
   const handleShowInc = () => setShowIncome(true);
 
+  
   return (
     <Container style={{ marginTop: "40px" , width:"720px" }}>
       <Row>
