@@ -1,4 +1,4 @@
-# Expense-Tracker-App
+# Expense-Tracker-App (Common Cents)
 
 
 <!-- ABOUT THE PROJECT -->
